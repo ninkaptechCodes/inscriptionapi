@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -11,6 +11,16 @@
     <UserSecretsId>749d3a5f-85b1-4303-96cc-2186608302e0</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Databases\InscriptionApiDb.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Databases\InscriptionApiDb.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
@@ -30,7 +40,6 @@
 
   <ItemGroup>
     <Folder Include="Mapping\" />
-    <Folder Include="Databases\" />
   </ItemGroup>
 
 </Project>
