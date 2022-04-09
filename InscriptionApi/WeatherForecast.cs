@@ -1,6 +1,6 @@
 using System;
 
-namespace InscriptionApi
+namespace Ni_Soft.InscriptionApi
 {
     public class WeatherForecast
     {

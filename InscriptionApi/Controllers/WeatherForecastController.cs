@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace InscriptionApi.Controllers
+namespace Ni_Soft.InscriptionApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

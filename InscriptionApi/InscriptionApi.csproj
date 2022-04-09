@@ -2,13 +2,35 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+	  <Version>1.0.0.0</Version>
+	  <AssemblyName>Ni-Soft.$(MSBuildProjectName)</AssemblyName>
+	  <RootNamespace>$(AssemblyName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
+	  <Authors>Nina Kapinga</Authors>
+	  <Company>Ni-Soft | Ninkap-Tech</Company>
+	  <Description>.NET Core api inscription for LinkedIn Learning training</Description>
     <UserSecretsId>749d3a5f-85b1-4303-96cc-2186608302e0</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InscriptionApi.Business\InscriptionApi.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mapping\" />
+    <Folder Include="Databases\" />
   </ItemGroup>
 
 </Project>

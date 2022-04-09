@@ -7,12 +7,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Ni_Soft.InscriptionApi.Business;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace InscriptionApi
+namespace Ni_Soft.InscriptionApi
 {
     public class Startup
     {
@@ -28,6 +29,7 @@ namespace InscriptionApi
         {
 
             services.AddControllers();
+            services.AddServices(Configuration);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "InscriptionApi", Version = "v1" });
