@@ -22,9 +22,9 @@ namespace Ni_Soft.InscriptionApi.Data.Configurations
             DateTime now = DateTime.Now;
             var result = new List<CustomerEntity>()
             {
-                new CustomerEntity { Id = 1, Firstname = "Frank", Lastname = "Lacroix", CreatedOn = now, UpdatedOn = default, DeletedOn = default },
-                new CustomerEntity { Id = 2, Firstname = "Marie", Lastname = "Kapinga", CreatedOn = now, UpdatedOn = default, DeletedOn = default },
-                new CustomerEntity { Id = 3, Firstname = "Lea", Lastname = "Agnes", CreatedOn = now, UpdatedOn = default, DeletedOn = default }
+                new CustomerEntity { Id = 1, Firstname = "Frank", Lastname = "Lacroix", Email = "f.lacroix@gmail.com", CreatedOn = now, UpdatedOn = default, DeletedOn = default },
+                new CustomerEntity { Id = 2, Firstname = "Marie", Lastname = "Kapinga", Email = "m.kapinga@gmail.com", CreatedOn = now, UpdatedOn = default, DeletedOn = default },
+                new CustomerEntity { Id = 3, Firstname = "Lea", Lastname = "Agnes", Email = "a.lea@gmail.com", CreatedOn = now, UpdatedOn = default, DeletedOn = default }
             };
             return result;
         }

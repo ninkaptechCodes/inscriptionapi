@@ -19,6 +19,8 @@ namespace Ni_Soft.InscriptionApi.Data.Entities
         [Required]
         public string Lastname { get; set; }
         [Required]
+        public string Email { get; set; }
+        [Required]
         public DateTime CreatedOn { get; set; }
         public DateTime? UpdatedOn { get; set; }
         public DateTime? DeletedOn { get; set; }

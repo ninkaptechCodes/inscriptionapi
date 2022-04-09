@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Ni_Soft.InscriptionApi.Data.Databases;
 
 namespace Ni_Soft.InscriptionApi.Data.Migrations
 {
     [DbContext(typeof(InscriptionDbContext))]
-    partial class InscriptionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220409225133_AddEmailToCustomer")]
+    partial class AddEmailToCustomer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
